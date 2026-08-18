@@ -221,6 +221,11 @@ This repository builds upon and is related to the following works:
 - [NASA General Urban Air Mobility](https://github.com/nasa/Generic-Urban-Air-Mobility-GUAM)
 - [Presentation](https://ntrs.nasa.gov/api/citations/20220017451/downloads/Patterson-2023-SciTech-L1-v3_2.pdf)
 
+## Acknowledgements
+
+The integration of the L1 Adaptive Controller was implemented by John L. Bullock.
+[GitHub](https://github.com/bullock8)
+
 [//]: # (### Citation)
 
 [//]: # ()
