@@ -1,4 +1,4 @@
-#An L1 Adaptive Control Augmentation for a Lift-Plus-Cruise Vehicle
+## An L1 Adaptive Control Augmentation for a Lift-Plus-Cruise Vehicle
 
 
 <p align="center">
