@@ -70,12 +70,16 @@ heading angle)
 
 ## Controllers
 Baseline : A nominal gain scheduled (LQRi) baseline, unified controller (same commands across three flight phases). The baseline controller operates in the heading frame (i.e., the NED frame rotated by the heading angle) .
+<p align="center">
+  <img src="media/baseline.png" alt600">
+<em>Figure : Linear Quadratic Regulator with integrator states.</em>
+</p>
 L1 Adaptive Control :   The L1 control augmentation is designed for each of the trim conditions to compensate for the nonlinear time- and state-dependent uncertainties in the vehicle dynamics.
 
 Set the `useL1` flag to a value greater than zero to enable the L1 adaptive control augmentation; set it to zero or a negative value to disable it.
 
 <p align="center">
-  <img src="media/l1arch.png" alt600">
+  <img src="media/l1aug.png" alt600">
 <em>Figure : L1 adaptive control augmentation.</em>
 </p>
 
