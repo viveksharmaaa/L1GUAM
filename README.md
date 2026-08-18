@@ -1,9 +1,19 @@
 ## An L1 Adaptive Control Augmentation for a Lift-Plus-Cruise Vehicle
 
+<p align="center">
+  <img src="https://img.shields.io/badge/ME562-Course%20Project-blue" alt="Course Project">
+</p>
+<p align="center">
+  <img src="media/guam.png" alt600">
+<em>Figure : Rendering of a Lift+Cruise NASA reference configuration.</em>
+</p>
+
+## Dynamical Model
+
+We consider rigid-body dynamics of the form:
 
 <p align="center">
-  <img src="media/l1arch.png" alt600">
-<em>Figure 1: L1 adaptive control augmentation.</em>
+  <img src="media/dynamics.png" alt600">
 </p>
 
 ## Simulation
@@ -12,8 +22,8 @@
 NASA TTT-Autonomous Systems(AS): Intelligent Contingency Management (ICM)  
                       Generic UAM Simulation   
                       Version 1.1  
-*************************************************************************  
- 
+*************************************************************************
+
 *************************************************************************  
 Point of Contact:  
 Michael J. Acheson  
@@ -57,9 +67,20 @@ piece-wise Bezier curves, and doublets)
  unified controller (same commands across three flight phases). The baseline   
 controller operates in the heading frame (i.e., the NED frame rotated by the   
 heading angle)  
-  
-Demonstration trajectory flights are found in the Exec_Scripts folder. Demo  
-cases include:    
+
+## Controllers
+Baseline : A nominal gain scheduled (LQRi) baseline, unified controller (same commands across three flight phases). The baseline controller operates in the heading frame (i.e., the NED frame rotated by the heading angle) .
+L1 Adaptive Control :   The L1 control augmentation is designed for each of the trim conditions to compensate for the nonlinear time- and state-dependent uncertainties in the vehicle dynamics.
+
+Set the `useL1` flag to a value greater than zero to enable the L1 adaptive control augmentation; set it to zero or a negative value to disable it.
+
+<p align="center">
+  <img src="media/l1arch.png" alt600">
+<em>Figure : L1 adaptive control augmentation.</em>
+</p>
+
+## Flight Plans
+Demonstration trajectory flights are found in the Exec_Scripts folder. Demo cases include:    
   1) a simple sinusoidal input case  (./Exec_Scripts/exam_TS_Sinusoidal_traj.m)  
   2) a basic lifting hover and transition to forward flight (./Exec_Scripts/exam_TS_Hover2Cruise_traj.m)  
   3) a cruise climbing right hand turn (./Exec_Scripts/exam_TS_Cruise_Climb_Turn_traj.m)  
