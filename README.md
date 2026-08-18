@@ -210,42 +210,105 @@ Baseline controller gain scheduling:  The gain scheduling m-files are contained 
 The top level script for gain scheduling the baseline controller (LSQi) is ctrl_scheduler_GUAM.m.  This script schedules the   
 Longitudinal and Lateral axes seperately.  A few linearization scripts are available but the main script is get_lin_dynamics_heading.m.  
 This script linearizes around a designated flight condition, and other scripts (e.g., get_lat_dynamics_heading.m and ctrl_lat.m) segregate  
-the linearized dynamics according to desired axes.  
+the linearized dynamics according to desired axes.
+
+## References
+
+This repository builds upon and is related to the following works:
+
+- Andrew Patterson, Kasey A. Ackerman, Jacob Cook, Michael J. Acheson and Irene M. Gregory. "An L1 Adaptive Control Augmentation for a Lift-Plus-Cruise Vehicle,"AIAA 2023-2541. AIAA SCITECH 2023 Forum. January 2023.
+  [[Paper](https://arc.aiaa.org/action/showCitFormats?doi=10.2514%2F6.2023-2541)]
+- [NASA General Urban Air Mobility](https://github.com/nasa/Generic-Urban-Air-Mobility-GUAM)
+- [Presentation](https://ntrs.nasa.gov/api/citations/20220017451/downloads/Patterson-2023-SciTech-L1-v3_2.pdf)
+
+[//]: # (### Citation)
+
+[//]: # ()
+[//]: # (If you find this repository useful, please consider citing:)
+
+[//]: # ()
+[//]: # (```bibtex)
+
+[//]: # (@article{sharma2026gbdiff,)
+
+[//]: # (  title   = {Diffusion-Guided Learning of Graph Barrier Certificates for Safe Multi-Robot Control},)
+
+[//]: # (  author  = {Sharma, Vivek and others},)
+
+[//]: # (  journal = {Under Review},)
+
+[//]: # (  year    = {2026})
+
+[//]: # (})
+
+
  
-*************************************************************************  
-Notices:  
-Copyright 2024 United States Government as represented by the Administrator   
-of the National Aeronautics and Space Administration. All Rights Reserved.  
-This software calls, but does not include, the following third-party software,   
-which is subject to the terms and conditions of its licensor, as applicable:  
- 
-The MATLAB®/SIMULINK® brand simulation software products,   
-which are offered by The MathWorks, Inc.  
- 
-Users must supply their own licenses:     https://www.mathworks.com  
- 
-Disclaimers  
-No Warranty: THE SUBJECT SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY  
-OF ANY KIND, EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT   
-LIMITED TO, ANY WARRANTY THAT THE SUBJECT SOFTWARE WILL CONFORM TO   
-SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A   
-PARTICULAR PURPOSE, OR FREEDOM FROM INFRINGEMENT, ANY WARRANTY THAT THE   
-SUBJECT SOFTWARE WILL BE ERROR FREE, OR ANY WARRANTY THAT DOCUMENTATION,   
-IF PROVIDED, WILL CONFORM TO THE SUBJECT SOFTWARE. THIS AGREEMENT DOES NOT,   
-IN ANY MANNER, CONSTITUTE AN ENDORSEMENT BY GOVERNMENT AGENCY OR ANY PRIOR   
-RECIPIENT OF ANY RESULTS, RESULTING DESIGNS, HARDWARE, SOFTWARE PRODUCTS   
-OR ANY OTHER APPLICATIONS RESULTING FROM USE OF THE SUBJECT SOFTWARE.    
-FURTHER, GOVERNMENT AGENCY DISCLAIMS ALL WARRANTIES AND LIABILITIES REGARDING   
-THIRD-PARTY SOFTWARE, IF PRESENT IN THE ORIGINAL SOFTWARE,   
-AND DISTRIBUTES IT "AS IS."   
-  
-Waiver and Indemnity:  RECIPIENT AGREES TO WAIVE ANY AND ALL CLAIMS AGAINST  
-THE UNITED STATES GOVERNMENT, ITS CONTRACTORS AND SUBCONTRACTORS, AS WELL  
-AS ANY PRIOR RECIPIENT.  IF RECIPIENT'S USE OF THE SUBJECT SOFTWARE RESULTS  
-IN ANY LIABILITIES, DEMANDS, DAMAGES, EXPENSES OR LOSSES ARISING FROM SUCH  
-USE, INCLUDING ANY DAMAGES FROM PRODUCTS BASED ON, OR RESULTING FROM,   
-RECIPIENT'S USE OF THE SUBJECT SOFTWARE, RECIPIENT SHALL INDEMNIFY AND   
-HOLD HARMLESS THE UNITED STATES GOVERNMENT, ITS CONTRACTORS AND SUBCONTRACTORS,  
-AS WELL AS ANY PRIOR RECIPIENT, TO THE EXTENT PERMITTED BY LAW.    
-RECIPIENT'S SOLE REMEDY FOR ANY SUCH MATTER SHALL BE THE IMMEDIATE,   
-UNILATERAL TERMINATION OF THIS AGREEMENT.  
+[//]: # (*************************************************************************  )
+
+[//]: # (Notices:  )
+
+[//]: # (Copyright 2024 United States Government as represented by the Administrator   )
+
+[//]: # (of the National Aeronautics and Space Administration. All Rights Reserved.  )
+
+[//]: # (This software calls, but does not include, the following third-party software,   )
+
+[//]: # (which is subject to the terms and conditions of its licensor, as applicable:  )
+
+[//]: # ( )
+[//]: # (The MATLAB®/SIMULINK® brand simulation software products,   )
+
+[//]: # (which are offered by The MathWorks, Inc.  )
+
+[//]: # ( )
+[//]: # (Users must supply their own licenses:     https://www.mathworks.com  )
+
+[//]: # ( )
+[//]: # (Disclaimers  )
+
+[//]: # (No Warranty: THE SUBJECT SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY  )
+
+[//]: # (OF ANY KIND, EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT   )
+
+[//]: # (LIMITED TO, ANY WARRANTY THAT THE SUBJECT SOFTWARE WILL CONFORM TO   )
+
+[//]: # (SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A   )
+
+[//]: # (PARTICULAR PURPOSE, OR FREEDOM FROM INFRINGEMENT, ANY WARRANTY THAT THE   )
+
+[//]: # (SUBJECT SOFTWARE WILL BE ERROR FREE, OR ANY WARRANTY THAT DOCUMENTATION,   )
+
+[//]: # (IF PROVIDED, WILL CONFORM TO THE SUBJECT SOFTWARE. THIS AGREEMENT DOES NOT,   )
+
+[//]: # (IN ANY MANNER, CONSTITUTE AN ENDORSEMENT BY GOVERNMENT AGENCY OR ANY PRIOR   )
+
+[//]: # (RECIPIENT OF ANY RESULTS, RESULTING DESIGNS, HARDWARE, SOFTWARE PRODUCTS   )
+
+[//]: # (OR ANY OTHER APPLICATIONS RESULTING FROM USE OF THE SUBJECT SOFTWARE.    )
+
+[//]: # (FURTHER, GOVERNMENT AGENCY DISCLAIMS ALL WARRANTIES AND LIABILITIES REGARDING   )
+
+[//]: # (THIRD-PARTY SOFTWARE, IF PRESENT IN THE ORIGINAL SOFTWARE,   )
+
+[//]: # (AND DISTRIBUTES IT "AS IS."   )
+
+[//]: # (  )
+[//]: # (Waiver and Indemnity:  RECIPIENT AGREES TO WAIVE ANY AND ALL CLAIMS AGAINST  )
+
+[//]: # (THE UNITED STATES GOVERNMENT, ITS CONTRACTORS AND SUBCONTRACTORS, AS WELL  )
+
+[//]: # (AS ANY PRIOR RECIPIENT.  IF RECIPIENT'S USE OF THE SUBJECT SOFTWARE RESULTS  )
+
+[//]: # (IN ANY LIABILITIES, DEMANDS, DAMAGES, EXPENSES OR LOSSES ARISING FROM SUCH  )
+
+[//]: # (USE, INCLUDING ANY DAMAGES FROM PRODUCTS BASED ON, OR RESULTING FROM,   )
+
+[//]: # (RECIPIENT'S USE OF THE SUBJECT SOFTWARE, RECIPIENT SHALL INDEMNIFY AND   )
+
+[//]: # (HOLD HARMLESS THE UNITED STATES GOVERNMENT, ITS CONTRACTORS AND SUBCONTRACTORS,  )
+
+[//]: # (AS WELL AS ANY PRIOR RECIPIENT, TO THE EXTENT PERMITTED BY LAW.    )
+
+[//]: # (RECIPIENT'S SOLE REMEDY FOR ANY SUCH MATTER SHALL BE THE IMMEDIATE,   )
+
+[//]: # (UNILATERAL TERMINATION OF THIS AGREEMENT.  )
