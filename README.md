@@ -1,3 +1,13 @@
+#An L1 Adaptive Control Augmentation for a Lift-Plus-Cruise Vehicle
+
+
+<p align="center">
+  <img src="media/l1arch.png" alt600">
+<em>Figure 1: L1 adaptive control augmentation.</em>
+</p>
+
+## Simulation
+<!--
 *************************************************************************  
 NASA TTT-Autonomous Systems(AS): Intelligent Contingency Management (ICM)  
                       Generic UAM Simulation   
@@ -21,7 +31,9 @@ Also includes piece-wise Bezier RefInput reference trajectory capability, and a
 simulation output animation script (./utilities/Animate_SimOut.m).  Also, this  
 version enables a user defined output script that enables user to specify output variables  
 (e.g., ./vehicles/Lift+Cruise/setup/User_SimOut/mySimOutFunc_Animate.m)  
- 
+ -->
+
+
 *************************************************************************   
 To run a simulation example case, just execute the RUNME.m script at the top level!  
 **************************************************************************  
@@ -55,20 +67,33 @@ cases include:
   5) two examples of piece-wise Bezier curve trajectories: a) cruise decent and decel,   
      b) hover climb and acceleration  
   
-These demonstration trajectories can be performed by executing ./RUNME.m at the top level folder   
-Alternatively, these examples can be accessed by adding the ./Exec_Scripts folder to the matlab path   
-running the associated execution example script (e.g., "exam_TS_Cruise_Climb_Turn_traj.m" or   
-"exam_TS_Hover2Cruise_traj.m" m-file).  Once the "GUAM" simulink model opens, run the model.    
-Output data is provided by the matlab logged signal logsout{1}.  Many analysis scripts make use  
-of the output data assigned to a SimOut structure: >>SimOut = logsout{1}.Values;  
-Simulation input (fixed) parameters are provided in a large structure SimIn, whereas   
-desired tunable simulation parameters are provided using the large structure: SimPar.    
-The structure SimIn, SimPar and SimOut therefore contain the (fixed) simulation inputs,   
-the (variable) simulation inputs, and the simulation outputs respectively.  Some basic  
-results plotting can be performed by running the m-file: ./vehicles/Lift+Cruise/Utils/simPlots_GUAM.m  
-Simulation results animation (e.g., creation of a .avi file or similar) is available by use  
-of the script: ./utilities/Animate_SimOut.m.    
-*************************************************************************  
+[//]: # (These demonstration trajectories can be performed by executing ./RUNME.m at the top level folder   )
+
+[//]: # (Alternatively, these examples can be accessed by adding the ./Exec_Scripts folder to the matlab path   )
+
+[//]: # (running the associated execution example script &#40;e.g., "exam_TS_Cruise_Climb_Turn_traj.m" or   )
+
+[//]: # ("exam_TS_Hover2Cruise_traj.m" m-file&#41;.  Once the "GUAM" simulink model opens, run the model.    )
+
+[//]: # (Output data is provided by the matlab logged signal logsout{1}.  Many analysis scripts make use  )
+
+[//]: # (of the output data assigned to a SimOut structure: >>SimOut = logsout{1}.Values;  )
+
+[//]: # (Simulation input &#40;fixed&#41; parameters are provided in a large structure SimIn, whereas   )
+
+[//]: # (desired tunable simulation parameters are provided using the large structure: SimPar.    )
+
+[//]: # (The structure SimIn, SimPar and SimOut therefore contain the &#40;fixed&#41; simulation inputs,   )
+
+[//]: # (the &#40;variable&#41; simulation inputs, and the simulation outputs respectively.  Some basic  )
+
+[//]: # (results plotting can be performed by running the m-file: ./vehicles/Lift+Cruise/Utils/simPlots_GUAM.m  )
+
+[//]: # (Simulation results animation &#40;e.g., creation of a .avi file or similar&#41; is available by use  )
+
+[//]: # (of the script: ./utilities/Animate_SimOut.m.    )
+
+[//]: # (*************************************************************************  )
   
 While the demonstration scripts are available, a user can in general select  
 among variants subsystem variants through an input structure "userStruct.variants"    
