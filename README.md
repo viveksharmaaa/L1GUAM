@@ -8,6 +8,10 @@
 <em>Figure : Rendering of a Lift+Cruise NASA reference configuration.</em>
 </p>
 
+<p align="center">
+  <img src="./media/Cruise_Climb_Turn_traj_L1.gif" width="700">
+</p>
+
 ## Dynamical Model
 
 We consider rigid-body dynamics of the form:
